@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Concert Blog: Reviews, news, and live music guides for fans and festival-goers."
+    />
+    <title>Concert Pulse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand">
+          <div class="brand-mark">CP</div>
+          <div>
+            <p class="brand-name">Concert Pulse</p>
+            <p class="brand-tag">Your spotlight on gigs, festivals & live music.</p>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#featured">Featured</a>
+          <a href="#posts">Posts</a>
+          <a href="#about">About</a>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+            <span class="theme-icon">🌙</span>
+          </button>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Live music stories</p>
+            <h1>Concert reviews, festival guides, and backstage vibes.</h1>
+            <p class="hero-text">
+              Explore the latest gigs, tour highlights, and venue spotlights from the heart of the crowd.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#posts">Browse concert posts</a>
+              <a class="button secondary" href="#featured">Featured picks</a>
+            </div>
+          </div>
+          <div class="hero-image" aria-hidden="true">
+            <div class="hero-photo"></div>
+          </div>
+        </section>
+
+        <section class="section section-featured" id="featured">
+          <div class="section-intro">
+            <p class="eyebrow">Editor's picks</p>
+            <h2>Concert stories to catch first</h2>
+          </div>
+          <div class="status-banner hidden" id="statusBanner"></div>
+          <div class="featured-grid" id="featuredGrid"></div>
+        </section>
+
+        <section class="section section-posts" id="posts">
+          <div class="section-intro">
+            <p class="eyebrow">Latest stories</p>
+            <h2>Hear from the scene</h2>
+          </div>
+
+          <div class="posts-filter">
+            <label for="categoryFilter">Filter by category</label>
+            <select id="categoryFilter" aria-label="Filter posts by category">
+              <option value="all">All categories</option>
+              <option value="festival">Festival</option>
+              <option value="guide">Guide</option>
+            </select>
+          </div>
+
+          <div class="post-list" id="postList"></div>
+        </section>
+
+        <section class="section section-detail hidden" id="postDetail">
+          <div class="section-intro">
+            <p class="eyebrow">On the road</p>
+            <h2 id="detailTitle"></h2>
+          </div>
+          <div class="detail-meta">
+            <span class="post-badge" id="detailBadge"></span>
+            <span class="post-category" id="detailCategory"></span>
+            <span class="post-location" id="detailVenue"></span>
+            <time id="detailDate"></time>
+          </div>
+          <div class="detail-image" id="detailImage"></div>
+          <div class="detail-content" id="detailContent"></div>
+          <button class="button secondary" id="detailBack">Back to stories</button>
+        </section>
+
+        <section class="section section-about" id="about">
+          <div class="section-intro">
+            <p class="eyebrow">About the blog</p>
+            <h2>Built for concert lovers and live music explorers.</h2>
+          </div>
+          <div class="about-grid">
+            <div>
+              <p>Concert Pulse is a modern, lightweight blog designed to work with GitHub Pages. Enjoy fast navigation, immersive imagery, and curated content — all without server-side rendering.</p>
+            </div>
+            <div class="about-card">
+              <h3>What you'll find</h3>
+              <ul>
+                <li>Gig reviews and tour highlights</li>
+                <li>Festival planning and venue spotlights</li>
+                <li>Artist interviews and backstage tips</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Concert Pulse © 2026 · Designed for GitHub Pages</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

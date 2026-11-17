@@ -1,0 +1,106 @@
+﻿[
+  {
+    "id": "post-1",
+    "category": "festival",
+    "title": "How to plan the perfect summer festival weekend",
+    "description": "Stage mapping, food runs, and crowd strategy for your best festival weekend yet.",
+    "date": "June 4, 2026",
+    "badge": "Festival Guide",
+    "venue": "Sunrise Field Fest",
+    "image": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Summer festivals are a marathon, not a sprint. Start by identifying the headline stages, the late-night secret sets, and the chill food zones so you can move smoothly through the day."
+      },
+      {
+        "type": "heading",
+        "text": "Build your festival rhythm"
+      },
+      {
+        "type": "paragraph",
+        "text": "Plan two or three must-see acts for each day, then leave room for discovery. The best festival weekends are the ones where you wander between stages and find new favorites without burning out."
+      },
+      {
+        "type": "paragraph",
+        "text": "Stay hydrated, charge your phone early, and pick a meeting spot for your group. When the headliner hits, you''ll thank yourself for staying calm, comfortable, and connected."
+      }
+    ]
+  },
+  {
+    "id": "post-3",
+    "category": "guide",
+    "title": "Top 8 venues for unforgettable indie concerts",
+    "description": "An insider''s list of intimate venues, rooftop stages, and late-night indie showcases.",
+    "date": "May 11, 2026",
+    "badge": "Venue Guide",
+    "venue": "City Soundrooms",
+    "image": "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1200&q=80",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Indie shows shine in spaces where the audience feels close enough to touch the stage. These eight venues combine great acoustics with the kind of energy that makes a concert feel personal."
+      },
+      {
+        "type": "paragraph",
+        "text": "From hidden basements to refurbished warehouses, each location on our list offers a unique character. Pack light, arrive early, and be ready to move with the crowd."
+      },
+      {
+        "type": "heading",
+        "text": "What to look for in a memorable venue"
+      },
+      {
+        "type": "paragraph",
+        "text": "Pay attention to sound quality, sightlines, and the bar/food layout. A great venue gives you room to breathe while still keeping the show tight and immersive."
+      }
+    ]
+  },
+  {
+    "id": "post-6",
+    "category": "festival",
+    "title": "Sunset Beats: a preview of the new open-air summer series",
+    "description": "A first look at the lineup, food market, and late-night stages planned for the new riverside festival.",
+    "date": "June 12, 2026",
+    "badge": "Festival Preview",
+    "venue": "Sunset Cove",
+    "image": "https://images.unsplash.com/photo-1518972559570-44bdd7b41924?auto=format&fit=crop&w=1200&q=80",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Sunset Beats is shaping up to be the biggest open-air series of the season. Expect rising acts, a neon art walk, and a lineup that stretches from indie anthems to dancefloor bangers."
+      },
+      {
+        "type": "heading",
+        "text": "What to pack for an open-air summer night"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bring a lightweight jacket for the breeze, cash for food stalls, and a portable battery pack. The venue is easy to navigate, but the best experience comes with a little planning."
+      }
+    ]
+  },
+  {
+    "id": "post-8",
+    "category": "guide",
+    "title": "How to capture concert photos without missing the moment",
+    "description": "A practical guide for fans who want strong live shots while staying present in the show.",
+    "date": "June 2, 2026",
+    "badge": "Photo Guide",
+    "venue": "Various venues",
+    "image": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "A great concert photo captures the mood, not just the moves. Learn how to balance camera settings, stage lighting, and your own presence so you leave with memories instead of missed moments."
+      },
+      {
+        "type": "heading",
+        "text": "Keep it simple and respectful"
+      },
+      {
+        "type": "paragraph",
+        "text": "Use a fast lens, avoid flash, and keep your phone at chest level. The best shots come when you stay engaged with the show and let the camera support the experience rather than replace it."
+      }
+    ]
+  }
+]
