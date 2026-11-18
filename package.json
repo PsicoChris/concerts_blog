@@ -1,0 +1,14 @@
+{
+  "name": "concert-pulse",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.18.2"
+  }
+}

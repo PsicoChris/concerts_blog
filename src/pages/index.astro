@@ -1,0 +1,146 @@
+---
+import Layout from '../layouts/Layout.astro';
+import posts from '../../posts.json';
+
+const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
+  ? import.meta.env.BASE_URL 
+  : `${import.meta.env.BASE_URL}/`;
+
+const resolveImg = (imgUrl?: string) => {
+  if (!imgUrl) return '';
+  if (imgUrl.startsWith('http://') || imgUrl.startsWith('https://')) return imgUrl;
+  const clean = imgUrl.startsWith('/') ? imgUrl.slice(1) : imgUrl;
+  return `${baseUrl}${clean}`;
+};
+
+const featuredPosts = posts.slice(0, 3);
+const categories = Array.from(new Set(posts.map(p => p.category).filter(Boolean)));
+---
+
+<Layout title="Concert Pulse | Concert reviews, festival guides & backstage vibes">
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Live music stories</p>
+      <h1>Concert reviews, festival guides, and backstage vibes.</h1>
+      <p class="hero-text">
+        Explore the latest gigs, tour highlights, and venue spotlights from the heart of the crowd.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="#posts">Browse concert posts</a>
+        <a class="button secondary" href="#featured">Featured picks</a>
+      </div>
+    </div>
+    <div class="hero-image" aria-hidden="true">
+      <div class="hero-photo"></div>
+    </div>
+  </section>
+
+  <!-- Featured Section -->
+  <section class="section section-featured" id="featured">
+    <div class="section-intro">
+      <p class="eyebrow">Editor's picks</p>
+      <h2>Concert stories to catch first</h2>
+    </div>
+    <div class="featured-grid" id="featuredGrid">
+      {featuredPosts.map((post) => {
+        const postUrl = `${baseUrl}reviews/${post.slug || post.id}/`;
+        const postImg = resolveImg(post.image);
+        return (
+          <article class="featured-card" id={`featured-${post.id}`}>
+            <a href={postUrl}>
+              <div class="featured-image" style={`background-image: url('${postImg}')`}></div>
+              <div class="featured-overlay">
+                <span class="featured-badge">{post.badge || post.category}</span>
+                <h3 class="featured-title">{post.title}</h3>
+              </div>
+            </a>
+          </article>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- All Posts Section -->
+  <section class="section section-posts" id="posts">
+    <div class="section-intro">
+      <p class="eyebrow">Latest stories</p>
+      <h2>Hear from the scene</h2>
+    </div>
+
+    <div class="posts-filter">
+      <label for="categoryFilter">Filter by category</label>
+      <select id="categoryFilter" aria-label="Filter posts by category">
+        <option value="all">All categories</option>
+        {categories.map((cat) => (
+          <option value={cat} style="text-transform: capitalize;">{cat}</option>
+        ))}
+      </select>
+    </div>
+
+    <div class="post-list" id="postList">
+      {posts.map((post) => {
+        const postUrl = `${baseUrl}reviews/${post.slug || post.id}/`;
+        const postImg = resolveImg(post.image);
+        return (
+          <article class="post-card" data-category={post.category} id={post.id}>
+            <div class="post-thumb" style={`background-image: url('${postImg}')`}></div>
+            <header>
+              <h3>{post.title}</h3>
+              <div class="post-meta">
+                {post.badge && <span class="post-badge">{post.badge}</span>}
+                {post.date && <span class="post-date">{post.date}</span>}
+              </div>
+            </header>
+            <p class="post-summary">{post.description}</p>
+            <a class="read-link" href={postUrl}>Read full review →</a>
+          </article>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section section-about" id="about">
+    <div class="section-intro">
+      <p class="eyebrow">About the blog</p>
+      <h2>Built for concert lovers and live music explorers.</h2>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p>
+          Concert Pulse is a modern Jamstack blog. Fast static pre-rendering,
+          crisp imagery, and curated music coverage with zero server overhead.
+        </p>
+      </div>
+      <div class="about-card">
+        <h3>What you'll find</h3>
+        <ul>
+          <li>Gig reviews and tour highlights</li>
+          <li>Festival planning and venue spotlights</li>
+          <li>Artist interviews and backstage tips</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client-side Category Filter -->
+  <script is:inline>
+    const filterSelect = document.getElementById('categoryFilter');
+    const cards = document.querySelectorAll('.post-card');
+
+    if (filterSelect) {
+      filterSelect.addEventListener('change', (e) => {
+        const selected = e.target.value;
+        cards.forEach((card) => {
+          const cardCat = card.getAttribute('data-category');
+          if (selected === 'all' || cardCat === selected) {
+            card.style.display = 'grid';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
+</Layout>

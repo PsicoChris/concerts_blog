@@ -1,6 +1,7 @@
 ﻿[
   {
     "id": "post-1",
+    "slug": "perfect-summer-festival-weekend",
     "category": "festival",
     "title": "How to plan the perfect summer festival weekend",
     "description": "Stage mapping, food runs, and crowd strategy for your best festival weekend yet.",
@@ -23,15 +24,16 @@
       },
       {
         "type": "paragraph",
-        "text": "Stay hydrated, charge your phone early, and pick a meeting spot for your group. When the headliner hits, you''ll thank yourself for staying calm, comfortable, and connected."
+        "text": "Stay hydrated, charge your phone early, and pick a meeting spot for your group. When the headliner hits, you'll thank yourself for staying calm, comfortable, and connected."
       }
     ]
   },
   {
     "id": "post-3",
+    "slug": "top-8-indie-concert-venues",
     "category": "guide",
     "title": "Top 8 venues for unforgettable indie concerts",
-    "description": "An insider''s list of intimate venues, rooftop stages, and late-night indie showcases.",
+    "description": "An insider's list of intimate venues, rooftop stages, and late-night indie showcases.",
     "date": "May 11, 2026",
     "badge": "Venue Guide",
     "venue": "City Soundrooms",
@@ -57,6 +59,7 @@
   },
   {
     "id": "post-6",
+    "slug": "sunset-beats-festival-preview",
     "category": "festival",
     "title": "Sunset Beats: a preview of the new open-air summer series",
     "description": "A first look at the lineup, food market, and late-night stages planned for the new riverside festival.",
@@ -81,6 +84,7 @@
   },
   {
     "id": "post-8",
+    "slug": "concert-photos-guide",
     "category": "guide",
     "title": "How to capture concert photos without missing the moment",
     "description": "A practical guide for fans who want strong live shots while staying present in the show.",
